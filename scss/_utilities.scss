@@ -24,8 +24,16 @@
     width: 100%;
     margin-right: auto;
     margin-left: auto;
-    padding-right: var(--gutter-x, 1.5rem);
-    padding-left: var(--gutter-x, 1.5rem);
+    padding-right: var(--gutter-x, .75rem);
+    padding-left: var(--gutter-x, .75rem);
+}
+
+.container-fluid {
+    width: 100%;
+    padding-right: var(--gutter-x, 1rem);
+    padding-left: var(--gutter-x, 1rem);
+    margin-right: auto;
+    margin-left: auto;
 }
 
 $container-max-widths: (
@@ -49,6 +57,10 @@ $grid-breakpoints: (
     @media (min-width: map-get($grid-breakpoints, $breakpoint)) {
         .container-#{$breakpoint} {
             max-width: $width;
+            margin-right: auto;
+            margin-left: auto;
+            padding-right: var(--gutter-x, .75rem);
+            padding-left: var(--gutter-x, .75rem);
         }
     }
 }

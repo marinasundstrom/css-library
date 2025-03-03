@@ -33,3 +33,5 @@ function initScrollToTop() {
         document.documentElement.scrollTo(0, 0);
     });
 }
+
+initScrollToTop();
