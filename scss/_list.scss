@@ -1,0 +1,30 @@
+.list-unstyled {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 0;
+}
+
+.list-inline {
+    padding-left: 0;
+    list-style: none;
+    margin: 0;
+}
+
+.list-inline-item {
+    display: inline-block;
+    margin-right: 0.5rem;
+}
+
+.list-group-flush {
+    border-radius: 0;
+}
+
+.list-group-flush .list-group-item {
+    border-left: 0;
+    border-right: 0;
+    border-radius: 0;
+}
+
+.list-group-striped .list-group-item:nth-child(odd) {
+    background-color: #f8f9fa;
+}

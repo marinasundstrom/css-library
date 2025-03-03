@@ -1,0 +1,294 @@
+// _utilities.scss
+
+.bg-dark {
+    background-color: $dark !important;
+    color: #fff;
+}
+
+.bg-light {
+    background-color: $light !important;
+    color: #000;
+}
+
+.bg-primary {
+    background-color: $primary !important;
+    color: #fff;
+}
+
+.bg-secondary {
+    background-color: $secondary !important;
+    color: #fff;
+}
+
+.container {
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: var(--gutter-x, 1.5rem);
+    padding-left: var(--gutter-x, 1.5rem);
+}
+
+$container-max-widths: (
+    sm: 540px,
+    md: 720px,
+    lg: 960px,
+    xl: 1140px,
+    xxl: 1320px
+);
+
+$grid-breakpoints: (
+    xs: 0,
+    sm: 576px,
+    md: 768px,
+    lg: 992px,
+    xl: 1200px,
+    xxl: 1400px
+);
+
+@each $breakpoint, $width in $container-max-widths {
+    @media (min-width: map-get($grid-breakpoints, $breakpoint)) {
+        .container-#{$breakpoint} {
+            max-width: $width;
+        }
+    }
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -15px;
+    margin-right: -15px;
+}
+
+.col {
+    flex: 1 1 0%;
+    max-width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+[class^="col-"] {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+@for $i from 1 through 12 {
+    .col-#{$i} {
+        flex: 0 0 calc(100% * #{$i} / 12);
+        max-width: calc(100% * #{$i} / 12);
+    }
+}
+
+.m-auto {
+    margin: auto;
+}
+
+.mx-auto {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@for $i from 1 through 12 {
+    .mx-#{$i} {
+        margin-left: #{($i * 0.25)}rem !important;
+        margin-right: #{($i * 0.25)}rem !important;
+    }
+
+    .my-#{$i} {
+        margin-top: #{($i * 0.25)}rem !important;
+        margin-bottom: #{($i * 0.25)}rem !important;
+    }
+
+    .py-#{$i} {
+        padding-top: #{($i * 0.25)}rem !important;
+        padding-bottom: #{($i * 0.25)}rem !important;
+    }
+
+    .px-#{$i} {
+        padding-left: #{($i * 0.25)}rem !important;
+        padding-right: #{($i * 0.25)}rem !important;
+    }
+}
+
+@each $breakpoint, $size in $breakpoints {
+    @media (min-width: $size) {
+        @for $i from 1 through 12 {
+            .col-#{$breakpoint}-#{$i} {
+                flex: 0 0 calc(100% * #{$i} / 12);
+                max-width: calc(100% * #{$i} / 12);
+            }
+        }
+
+        @for $i from 0 through 5 {
+            .m-#{$breakpoint}-#{$i} {
+                margin: #{($i * 0.25)}rem !important;
+            }
+
+            .p-#{$breakpoint}-#{$i} {
+                padding: #{($i * 0.25)}rem !important;
+            }
+
+            .mx-#{$breakpoint}-#{$i} {
+                margin-left: #{($i * 0.25)}rem !important;
+                margin-right: #{($i * 0.25)}rem !important;
+            }
+
+            .my-#{$breakpoint}-#{$i} {
+                margin-top: #{($i * 0.25)}rem !important;
+                margin-bottom: #{($i * 0.25)}rem !important;
+            }
+
+            .mt-#{$breakpoint}-#{$i} {
+                margin-top: #{($i * 0.25)}rem !important;
+            }
+
+            .mb-#{$breakpoint}-#{$i} {
+                margin-bottom: #{($i * 0.25)}rem !important;
+            }
+
+            .ms-#{$breakpoint}-#{$i} {
+                margin-left: #{($i * 0.25)}rem !important;
+            }
+
+            .me-#{$breakpoint}-#{$i} {
+                margin-right: #{($i * 0.25)}rem !important;
+            }
+
+            .py-#{$breakpoint}-#{$i} {
+                padding-top: #{($i * 0.25)}rem !important;
+                padding-bottom: #{($i * 0.25)}rem !important;
+            }
+
+            .px-#{$breakpoint}-#{$i} {
+                padding-left: #{($i * 0.25)}rem !important;
+                padding-right: #{($i * 0.25)}rem !important;
+            }
+
+            .pt-#{$breakpoint}-#{$i} {
+                padding-top: #{($i * 0.25)}rem !important;
+            }
+
+            .pb-#{$breakpoint}-#{$i} {
+                padding-bottom: #{($i * 0.25)}rem !important;
+            }
+
+            .ps-#{$breakpoint}-#{$i} {
+                padding-left: #{($i * 0.25)}rem !important;
+            }
+
+            .pe-#{$breakpoint}-#{$i} {
+                padding-right: #{($i * 0.25)}rem !important;
+            }
+        }
+
+        .d-#{$breakpoint}-none {
+            display: none !important;
+        }
+
+        .d-#{$breakpoint}-block {
+            display: block !important;
+        }
+
+        .d-#{$breakpoint}-inline {
+            display: inline !important;
+        }
+
+        .d-#{$breakpoint}-inline-block {
+            display: inline-block !important;
+        }
+
+        .d-#{$breakpoint}-flex {
+            display: flex !important;
+        }
+
+        .d-#{$breakpoint}-grid {
+            display: grid !important;
+        }
+    }
+}
+
+// Spacing Utilities
+@for $i from 0 through 5 {
+    .m-#{$i} {
+        margin: #{($i * 0.25)}rem !important;
+    }
+
+    .p-#{$i} {
+        padding: #{($i * 0.25)}rem !important;
+    }
+
+    .mt-#{$i} {
+        margin-top: #{($i * 0.25)}rem !important;
+    }
+
+    .mb-#{$i} {
+        margin-bottom: #{($i * 0.25)}rem !important;
+    }
+
+    .ml-#{$i} {
+        margin-left: #{($i * 0.25)}rem !important;
+    }
+
+    .mr-#{$i} {
+        margin-right: #{($i * 0.25)}rem !important;
+    }
+
+    .pt-#{$i} {
+        padding-top: #{($i * 0.25)}rem !important;
+    }
+
+    .pb-#{$i} {
+        padding-bottom: #{($i * 0.25)}rem !important;
+    }
+
+    .pl-#{$i} {
+        padding-left: #{($i * 0.25)}rem !important;
+    }
+
+    .pr-#{$i} {
+        padding-right: #{($i * 0.25)}rem !important;
+    }
+}
+
+// Display Utilities
+.d-none {
+    display: none !important;
+}
+
+.d-block {
+    display: block !important;
+}
+
+.d-inline {
+    display: inline !important;
+}
+
+.d-inline-block {
+    display: inline-block !important;
+}
+
+.d-flex {
+    display: flex !important;
+}
+
+.d-grid {
+    display: grid !important;
+}
+
+.float-start {
+    float: left;
+}
+
+.float-end {
+    float: right;
+}
+
+[dir="rtl"] {
+    .float-start {
+        float: right;
+    }
+
+    .float-end {
+        float: left;
+    }
+}

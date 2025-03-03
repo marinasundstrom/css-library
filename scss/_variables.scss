@@ -1,0 +1,29 @@
+// _variables.scss
+
+:root {
+    --gutter-x: 1.5rem;
+    /* 24px */
+    --gutter-y: 0;
+}
+
+$primary: #007bff;
+$secondary: #6c757d;
+$success: #28a745;
+$danger: #dc3545;
+$warning: #ffc107;
+$info: #17a2b8;
+$light: #f8f9fa;
+$dark: #343a40;
+
+$font-family-sans-serif: Arial, sans-serif;
+$font-size-base: 1rem;
+$line-height-base: 1.5;
+
+$breakpoints: (
+    xs: 0,
+    sm: 576px,
+    md: 768px,
+    lg: 992px,
+    xl: 1200px,
+    xxl: 1400px
+);
