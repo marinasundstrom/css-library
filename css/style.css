@@ -630,6 +630,27 @@ small {
   margin-right: auto;
 }
 
+.my-auto {
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.ms-auto {
+  margin-inline-start: auto;
+}
+
+.me-auto {
+  margin-inline-end: auto;
+}
+
+.ps-auto {
+  padding: auto;
+}
+
+.pe-auto {
+  padding: auto;
+}
+
 .mx-1 {
   margin-left: 0.25rem !important;
   margin-right: 0.25rem !important;
@@ -3518,7 +3539,6 @@ small {
   background-color: #333;
   overflow: hidden;
   display: flex;
-  flex-direction: row;
   /* Default for LTR */
   align-items: center;
   padding: 0 0;
@@ -3562,6 +3582,7 @@ small {
   display: none;
   font-size: 24px;
   cursor: pointer;
+  order: 9999;
 }
 
 /* ✅ RTL Support - Reverse Item Order */
@@ -3580,12 +3601,19 @@ body[dir=rtl] .navbar .icon {
   /* order: -1; Move the icon to the front in RTL */
 }
 
-.navbar .container {
+.navbar > .container {
   display: flex;
   flex-wrap: inherit;
   align-items: center;
   justify-content: space-between;
   height: 50px;
+}
+
+.navbar-collapse {
+  display: flex;
+  flex-basis: 100%;
+  flex-grow: 1;
+  align-items: center;
 }
 
 .navbar-nav {
@@ -3594,6 +3622,8 @@ body[dir=rtl] .navbar .icon {
 
 .navbar .brand {
   padding: 14px 16px;
+  text-decoration: none;
+  white-space: nowrap;
 }
 
 ul.navbar-nav li {
@@ -3634,7 +3664,7 @@ ul.navbar-nav li {
     float: left;
     /* Move menu icon to left in RTL */
   }
-  .navbar .container {
+  .navbar > .container {
     /*flex-direction: row-reverse;*/
   }
   .navbar .brand {

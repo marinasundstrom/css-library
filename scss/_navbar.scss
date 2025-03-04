@@ -3,7 +3,6 @@
     background-color: #333;
     overflow: hidden;
     display: flex;
-    flex-direction: row;
     /* Default for LTR */
     align-items: center;
     padding: 0 0;
@@ -47,6 +46,7 @@
     display: none;
     font-size: 24px;
     cursor: pointer;
+    order: 9999;
 }
 
 /* ✅ RTL Support - Reverse Item Order */
@@ -65,12 +65,19 @@ body[dir="rtl"] .navbar .icon {
     /* order: -1; Move the icon to the front in RTL */
 }
 
-.navbar .container {
+.navbar>.container {
     display: flex;
     flex-wrap: inherit;
     align-items: center;
     justify-content: space-between;
     height: 50px;
+}
+
+.navbar-collapse {
+    display: flex;
+    flex-basis: 100%;
+    flex-grow: 1;
+    align-items: center;
 }
 
 .navbar-nav {
@@ -79,6 +86,8 @@ body[dir="rtl"] .navbar .icon {
 
 .navbar .brand {
     padding: 14px 16px;
+    text-decoration: none;
+    white-space: nowrap;
 }
 
 ul.navbar-nav li {
@@ -125,7 +134,7 @@ ul.navbar-nav li {
         /* Move menu icon to left in RTL */
     }
 
-    .navbar .container {
+    .navbar>.container {
         /*flex-direction: row-reverse;*/
     }
 

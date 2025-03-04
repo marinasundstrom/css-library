@@ -100,6 +100,27 @@ $grid-breakpoints: (
     margin-right: auto;
 }
 
+.my-auto {
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.ms-auto {
+    margin-inline-start: auto;
+}
+
+.me-auto {
+    margin-inline-end: auto;
+}
+
+.ps-auto {
+    padding: auto;
+}
+
+.pe-auto {
+    padding: auto;
+}
+
 @for $i from 1 through 12 {
     .mx-#{$i} {
         margin-left: #{($i * 0.25)}rem !important;
