@@ -1,68 +1,3 @@
-/* Add a black background color to the top navigation */
-.topnav {
-    background-color: #333;
-    overflow: hidden;
-}
-
-/* Style the links inside the navigation bar */
-.topnav a {
-    float: left;
-    display: block;
-    color: #f2f2f2;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-    font-size: 17px;
-}
-
-/* Change the color of links on hover */
-.topnav a:hover {
-    background-color: #ddd;
-    color: black;
-}
-
-/* Add an active class to highlight the current page */
-.topnav a.active {
-    background-color: #04AA6D;
-    color: white;
-}
-
-/* Hide the link that should open and close the topnav on small screens */
-.topnav .icon {
-    display: none;
-}
-
-/* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
-@media screen and (max-width: 600px) {
-    .topnav a:not(:first-child) {
-        display: none;
-    }
-
-    .topnav a.icon {
-        float: right;
-        display: block;
-    }
-}
-
-/* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
-@media screen and (max-width: 600px) {
-    .topnav.responsive {
-        position: relative;
-    }
-
-    .topnav.responsive a.icon {
-        position: absolute;
-        right: 0;
-        top: 0;
-    }
-
-    .topnav.responsive a {
-        float: none;
-        display: block;
-        text-align: left;
-    }
-}
-
 /* The side navigation menu */
 .sidenav {
     height: 100%;
@@ -85,6 +20,13 @@
     /* 0.5 second transition effect to slide in the sidenav */
 }
 
+body[dir="rtl"] {
+    .sidenav {
+        left: 0;
+        right: inherit;
+    }
+}
+
 /* The navigation menu links */
 .sidenav a {
     padding: 8px 8px 8px 32px;
@@ -93,6 +35,12 @@
     color: #818181;
     display: block;
     transition: 0.3s;
+}
+
+body[dir="rtl"] {
+    .sidenav a {
+        padding: 8px 32px 8px 8px;
+    }
 }
 
 /* When you mouse over the navigation links, change their color */
@@ -107,6 +55,12 @@
     right: 25px;
     font-size: 36px;
     margin-left: 50px;
+}
+
+body[dir="rtl"] {
+    .sidenav .closebtn {
+        padding-right: 0;
+    }
 }
 
 /* Style page content - use this if you want to push the page content to the right when you open the side navigation */
@@ -124,4 +78,12 @@
     .sidenav a {
         font-size: 18px;
     }
+}
+
+.navbar-nav {
+    display: flex;
+}
+
+ul.navbar-nav li {
+    list-style: none;
 }

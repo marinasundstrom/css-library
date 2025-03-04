@@ -30,8 +30,8 @@
 
 .container-fluid {
     width: 100%;
-    padding-right: var(--gutter-x, 1rem);
-    padding-left: var(--gutter-x, 1rem);
+    padding-right: var(--gutter-x, .75rem);
+    padding-left: var(--gutter-x, .75rem);
     margin-right: auto;
     margin-left: auto;
 }
@@ -237,11 +237,11 @@ $grid-breakpoints: (
         margin-bottom: #{($i * 0.25)}rem !important;
     }
 
-    .ml-#{$i} {
+    .ms-#{$i} {
         margin-left: #{($i * 0.25)}rem !important;
     }
 
-    .mr-#{$i} {
+    .me-#{$i} {
         margin-right: #{($i * 0.25)}rem !important;
     }
 
@@ -253,11 +253,11 @@ $grid-breakpoints: (
         padding-bottom: #{($i * 0.25)}rem !important;
     }
 
-    .pl-#{$i} {
+    .ps-#{$i} {
         padding-left: #{($i * 0.25)}rem !important;
     }
 
-    .pr-#{$i} {
+    .pe-#{$i} {
         padding-right: #{($i * 0.25)}rem !important;
     }
 }
@@ -304,3 +304,128 @@ $grid-breakpoints: (
         float: left;
     }
 }
+
+// Bootstrap 5 Flex Utility Classes (SCSS)
+$flex-directions: row, column, row-reverse, column-reverse;
+$flex-wraps: nowrap, wrap, wrap-reverse;
+$flex-justifies: start, end, center, between, around, evenly;
+$flex-aligns: start, end, center, baseline, stretch;
+$flex-values: 0, 1, auto;
+
+/*
+.d-flex {
+  display: flex !important;
+}
+*/
+
+.d-inline-flex {
+  display: inline-flex !important;
+}
+
+// Generate flex-direction classes
+@each $direction in $flex-directions {
+    .flex-#{$direction} {
+      flex-direction: $direction !important;
+    }
+  }
+  
+  // Generate flex-wrap classes
+  @each $wrap in $flex-wraps {
+    .flex-#{$wrap} {
+      flex-wrap: $wrap !important;
+    }
+  }
+  
+  // Generate justify-content classes
+  @each $justify in $flex-justifies {
+    .justify-content-#{$justify} {
+      justify-content: if($justify == start, flex-start,
+                       if($justify == end, flex-end,
+                       if($justify == between, space-between,
+                       if($justify == around, space-around,
+                       if($justify == evenly, space-evenly,
+                       center))))) !important;
+    }
+  }
+  
+  // Generate align-items classes
+  @each $align in $flex-aligns {
+    .align-items-#{$align} {
+      align-items: if($align == start, flex-start,
+                    if($align == end, flex-end, 
+                    $align)) !important;
+    }
+  }
+  
+  // Generate align-self classes
+  @each $align in $flex-aligns {
+    .align-self-#{$align} {
+      align-self: if($align == start, flex-start,
+                    if($align == end, flex-end,
+                    $align)) !important;
+    }
+  }
+  
+  // Generate align-content classes
+  @each $align in $flex-aligns {
+    .align-content-#{$align} {
+      align-content: if($align == start, flex-start,
+                       if($align == end, flex-end,
+                       $align)) !important;
+    }
+  }
+
+    // Generate flex-grow and flex-shrink classes
+
+  .flex-grow {
+    flex-grow: 1;
+}
+
+    @each $val in $flex-values {
+    .flex-grow-#{$val} {
+      flex-grow: $val !important;
+    }
+  
+    .flex-shrink-#{$val} {
+      flex-shrink: $val !important;
+    }
+  }
+  
+  // Generate flex-basis classes
+  @each $val in $flex-values {
+    .flex-basis-#{$val} {
+      flex-basis: if($val == auto, auto, #{$val * 100%}) !important;
+    }
+  }
+  
+  // Generate order classes
+  @for $i from -1 through 5 {
+    .order-#{$i} {
+      order: $i !important;
+    }
+  }
+
+  .d-grid {
+    display: grid !important;
+  }
+  
+  .d-inline-grid {
+    display: inline-grid !important;
+  }
+  
+  // Gap utility classes
+  $gap-sizes: 0, 1, 2, 3, 4, 5; // Default Bootstrap spacing scale
+  
+  @each $size in $gap-sizes {
+    .gap-#{$size} {
+      gap: #{$size * 0.25rem} !important; // Bootstrap uses 0.25rem spacing scale
+    }
+  
+    .row-gap-#{$size} {
+      row-gap: #{$size * 0.25rem} !important;
+    }
+  
+    .column-gap-#{$size} {
+      column-gap: #{$size * 0.25rem} !important;
+    }
+  }

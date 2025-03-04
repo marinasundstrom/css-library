@@ -1,3 +1,4 @@
+@charset "UTF-8";
 :root {
   --gutter-x: 1rem;
   /* 24px */
@@ -490,8 +491,8 @@ small {
 
 .container-fluid {
   width: 100%;
-  padding-right: var(--gutter-x, 1rem);
-  padding-left: var(--gutter-x, 1rem);
+  padding-right: var(--gutter-x, 0.75rem);
+  padding-left: var(--gutter-x, 0.75rem);
   margin-right: auto;
   margin-left: auto;
 }
@@ -2949,11 +2950,11 @@ small {
   margin-bottom: 0rem !important;
 }
 
-.ml-0 {
+.ms-0 {
   margin-left: 0rem !important;
 }
 
-.mr-0 {
+.me-0 {
   margin-right: 0rem !important;
 }
 
@@ -2965,11 +2966,11 @@ small {
   padding-bottom: 0rem !important;
 }
 
-.pl-0 {
+.ps-0 {
   padding-left: 0rem !important;
 }
 
-.pr-0 {
+.pe-0 {
   padding-right: 0rem !important;
 }
 
@@ -2989,11 +2990,11 @@ small {
   margin-bottom: 0.25rem !important;
 }
 
-.ml-1 {
+.ms-1 {
   margin-left: 0.25rem !important;
 }
 
-.mr-1 {
+.me-1 {
   margin-right: 0.25rem !important;
 }
 
@@ -3005,11 +3006,11 @@ small {
   padding-bottom: 0.25rem !important;
 }
 
-.pl-1 {
+.ps-1 {
   padding-left: 0.25rem !important;
 }
 
-.pr-1 {
+.pe-1 {
   padding-right: 0.25rem !important;
 }
 
@@ -3029,11 +3030,11 @@ small {
   margin-bottom: 0.5rem !important;
 }
 
-.ml-2 {
+.ms-2 {
   margin-left: 0.5rem !important;
 }
 
-.mr-2 {
+.me-2 {
   margin-right: 0.5rem !important;
 }
 
@@ -3045,11 +3046,11 @@ small {
   padding-bottom: 0.5rem !important;
 }
 
-.pl-2 {
+.ps-2 {
   padding-left: 0.5rem !important;
 }
 
-.pr-2 {
+.pe-2 {
   padding-right: 0.5rem !important;
 }
 
@@ -3069,11 +3070,11 @@ small {
   margin-bottom: 0.75rem !important;
 }
 
-.ml-3 {
+.ms-3 {
   margin-left: 0.75rem !important;
 }
 
-.mr-3 {
+.me-3 {
   margin-right: 0.75rem !important;
 }
 
@@ -3085,11 +3086,11 @@ small {
   padding-bottom: 0.75rem !important;
 }
 
-.pl-3 {
+.ps-3 {
   padding-left: 0.75rem !important;
 }
 
-.pr-3 {
+.pe-3 {
   padding-right: 0.75rem !important;
 }
 
@@ -3109,11 +3110,11 @@ small {
   margin-bottom: 1rem !important;
 }
 
-.ml-4 {
+.ms-4 {
   margin-left: 1rem !important;
 }
 
-.mr-4 {
+.me-4 {
   margin-right: 1rem !important;
 }
 
@@ -3125,11 +3126,11 @@ small {
   padding-bottom: 1rem !important;
 }
 
-.pl-4 {
+.ps-4 {
   padding-left: 1rem !important;
 }
 
-.pr-4 {
+.pe-4 {
   padding-right: 1rem !important;
 }
 
@@ -3149,11 +3150,11 @@ small {
   margin-bottom: 1.25rem !important;
 }
 
-.ml-5 {
+.ms-5 {
   margin-left: 1.25rem !important;
 }
 
-.mr-5 {
+.me-5 {
   margin-right: 1.25rem !important;
 }
 
@@ -3165,11 +3166,11 @@ small {
   padding-bottom: 1.25rem !important;
 }
 
-.pl-5 {
+.ps-5 {
   padding-left: 1.25rem !important;
 }
 
-.pr-5 {
+.pe-5 {
   padding-right: 1.25rem !important;
 }
 
@@ -3212,6 +3213,275 @@ small {
   float: left;
 }
 
+/*
+.d-flex {
+  display: flex !important;
+}
+*/
+.d-inline-flex {
+  display: inline-flex !important;
+}
+
+.flex-row {
+  flex-direction: row !important;
+}
+
+.flex-column {
+  flex-direction: column !important;
+}
+
+.flex-row-reverse {
+  flex-direction: row-reverse !important;
+}
+
+.flex-column-reverse {
+  flex-direction: column-reverse !important;
+}
+
+.flex-nowrap {
+  flex-wrap: nowrap !important;
+}
+
+.flex-wrap {
+  flex-wrap: wrap !important;
+}
+
+.flex-wrap-reverse {
+  flex-wrap: wrap-reverse !important;
+}
+
+.justify-content-start {
+  justify-content: flex-start !important;
+}
+
+.justify-content-end {
+  justify-content: flex-end !important;
+}
+
+.justify-content-center {
+  justify-content: center !important;
+}
+
+.justify-content-between {
+  justify-content: space-between !important;
+}
+
+.justify-content-around {
+  justify-content: space-around !important;
+}
+
+.justify-content-evenly {
+  justify-content: space-evenly !important;
+}
+
+.align-items-start {
+  align-items: flex-start !important;
+}
+
+.align-items-end {
+  align-items: flex-end !important;
+}
+
+.align-items-center {
+  align-items: center !important;
+}
+
+.align-items-baseline {
+  align-items: baseline !important;
+}
+
+.align-items-stretch {
+  align-items: stretch !important;
+}
+
+.align-self-start {
+  align-self: flex-start !important;
+}
+
+.align-self-end {
+  align-self: flex-end !important;
+}
+
+.align-self-center {
+  align-self: center !important;
+}
+
+.align-self-baseline {
+  align-self: baseline !important;
+}
+
+.align-self-stretch {
+  align-self: stretch !important;
+}
+
+.align-content-start {
+  align-content: flex-start !important;
+}
+
+.align-content-end {
+  align-content: flex-end !important;
+}
+
+.align-content-center {
+  align-content: center !important;
+}
+
+.align-content-baseline {
+  align-content: baseline !important;
+}
+
+.align-content-stretch {
+  align-content: stretch !important;
+}
+
+.flex-grow {
+  flex-grow: 1;
+}
+
+.flex-grow-0 {
+  flex-grow: 0 !important;
+}
+
+.flex-shrink-0 {
+  flex-shrink: 0 !important;
+}
+
+.flex-grow-1 {
+  flex-grow: 1 !important;
+}
+
+.flex-shrink-1 {
+  flex-shrink: 1 !important;
+}
+
+.flex-grow-auto {
+  flex-grow: auto !important;
+}
+
+.flex-shrink-auto {
+  flex-shrink: auto !important;
+}
+
+.flex-basis-0 {
+  flex-basis: 0% !important;
+}
+
+.flex-basis-1 {
+  flex-basis: 100% !important;
+}
+
+.flex-basis-auto {
+  flex-basis: auto !important;
+}
+
+.order--1 {
+  order: -1 !important;
+}
+
+.order-0 {
+  order: 0 !important;
+}
+
+.order-1 {
+  order: 1 !important;
+}
+
+.order-2 {
+  order: 2 !important;
+}
+
+.order-3 {
+  order: 3 !important;
+}
+
+.order-4 {
+  order: 4 !important;
+}
+
+.order-5 {
+  order: 5 !important;
+}
+
+.d-grid {
+  display: grid !important;
+}
+
+.d-inline-grid {
+  display: inline-grid !important;
+}
+
+.gap-0 {
+  gap: 0rem !important;
+}
+
+.row-gap-0 {
+  row-gap: 0rem !important;
+}
+
+.column-gap-0 {
+  column-gap: 0rem !important;
+}
+
+.gap-1 {
+  gap: 0.25rem !important;
+}
+
+.row-gap-1 {
+  row-gap: 0.25rem !important;
+}
+
+.column-gap-1 {
+  column-gap: 0.25rem !important;
+}
+
+.gap-2 {
+  gap: 0.5rem !important;
+}
+
+.row-gap-2 {
+  row-gap: 0.5rem !important;
+}
+
+.column-gap-2 {
+  column-gap: 0.5rem !important;
+}
+
+.gap-3 {
+  gap: 0.75rem !important;
+}
+
+.row-gap-3 {
+  row-gap: 0.75rem !important;
+}
+
+.column-gap-3 {
+  column-gap: 0.75rem !important;
+}
+
+.gap-4 {
+  gap: 1rem !important;
+}
+
+.row-gap-4 {
+  row-gap: 1rem !important;
+}
+
+.column-gap-4 {
+  column-gap: 1rem !important;
+}
+
+.gap-5 {
+  gap: 1.25rem !important;
+}
+
+.row-gap-5 {
+  row-gap: 1.25rem !important;
+}
+
+.column-gap-5 {
+  column-gap: 1.25rem !important;
+}
+
 .list-unstyled {
   list-style: none;
   padding-left: 0;
@@ -3241,6 +3511,110 @@ small {
 
 .list-group-striped .list-group-item:nth-child(odd) {
   background-color: #f8f9fa;
+}
+
+/* General Navbar Styling */
+.navbar {
+  background-color: #333;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row; /* Default for LTR */
+  align-items: center;
+  padding: 0 0;
+}
+
+/* Style the links inside the navigation bar */
+.navbar .navbar-nav {
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar .nav-item {
+  list-style: none;
+}
+
+.navbar .nav-link {
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+/* Change the color of links on hover */
+.navbar .nav-link:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Add an active class to highlight the current page */
+.navbar .nav-link.active {
+  background-color: #04AA6D;
+  color: white;
+}
+
+/* Hide the link that should open and close the navbar on small screens */
+.navbar .icon {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+/* ✅ RTL Support - Reverse Item Order */
+body[dir=rtl] .navbar {
+  flex-direction: row-reverse; /* Reverse navbar layout */
+}
+
+body[dir=rtl] .navbar .nav-link {
+  text-align: right; /* Align text properly */
+}
+
+/* Ensure the icon stays at the correct side */
+body[dir=rtl] .navbar .icon {
+  /* order: -1; Move the icon to the front in RTL */
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .navbar .navbar-nav {
+    display: none; /* Hide navigation items initially */
+    flex-direction: column;
+    position: absolute;
+    top: 64px;
+    left: 0;
+    right: 0;
+    background-color: #333;
+    width: 100%;
+  }
+  .navbar.responsive .navbar-nav {
+    display: flex;
+  }
+  .navbar .nav-link {
+    text-align: left;
+    padding: 12px 16px;
+    width: 100%;
+  }
+  .navbar .icon {
+    display: block;
+    color: #ffffff;
+    padding: 14px;
+  }
+  /* Adjust for RTL mode */
+  body[dir=rtl] .navbar .nav-link {
+    text-align: right;
+  }
+  body[dir=rtl] .navbar .icon {
+    float: left; /* Move menu icon to left in RTL */
+  }
+}
+.navbar > .container {
+  display: flex;
+  flex-wrap: inherit;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .shadow-sm {

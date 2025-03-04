@@ -31,65 +31,127 @@
 <body dir="ltr">
     <div class="app-container">
 
-        <nav id="mySidenav" class="sidenav">
-            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-            <a href="#">About</a>
-            <a href="#">Services</a>
-            <a href="#">Clients</a>
-            <a href="#">Contact</a>
-        </nav>
+        <header class="navbar" id="myTopnav">
 
-        <nav class="topnav" id="myTopnav">
-            <a href="#home" class="active">Home</a>
-            <a href="#news">News</a>
-            <a href="#contact">Contact</a>
-            <a href="#about">About</a>
-            <a href="javascript:void(0);" class="icon" onclick="openNav()">
-                <i class="fa fa-bars"></i>
-            </a>
-        </nav>
+            <nav class="container">
+                <!-- <span class="text-light"><b>Awesome app</b></span> -->
+
+                <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                    <i class="fa fa-bars"></i>
+                </a>
+
+                <ul class="navbar-nav flex-grow">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#home">Home</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#news">News</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" onclick="toggleDirection()">Toggle RTL</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
 
         <main class="container container-md mx-auto flex-grow">
             <article class="content">
-                <h1>Hello</h1>
-                <p>There were a variety of ways to win the game. James had played it long enough to know most of them
-                    and he could see what
-                    his opponent was trying to do. There was a simple counterattack that James could use and the game
-                    should be his. He
-                    began deploying it with the confidence of a veteran player who had been in this situation a thousand
-                    times in the past.
-                    So, it was with great surprise when his opponent used a move he had never before seen or anticipated
-                    to easily defeat
-                    him in the game.</p>
+                <div class="hebrew" style="display: none">
+                    <h1 class="mb-2"> פאר טסי – חורף בחלון</h1>
+                   
+                    <p class="mb-5">
+                        ימים יפים ידענו
+                        </br>זוכרת איך אהבנו
+                        </br>הזמן מזמן לקח הכל
+                        </br>הרבה שירים ניגנו
+                        </br>מילים יפות שיקרנו
+                        </br>עוד משלמים על זה עד היום
+                    </p>
 
-                <p>I guess we could discuss the implications of the phrase "meant to be." That is if we wanted to drown
-                    ourselves in a sea
-                    of backwardly referential semantics and other mumbo-jumbo. Maybe such a discussion would result in
-                    the determination
-                    that "meant to be" is exactly as meaningless a phrase as it seems to be, and that none of us is
-                    actually meant to be
-                    doing anything at all. But that's my existential underpants underpinnings showing. It's the way the
-                    cookie crumbles. And
-                    now I want a cookie.</p>
+                    <p class="mb-5">
+                        ולמה את לבד אם את כזאתי חכמה
+                        </br>ואיך את שוב בוכה אם את בכלל לא עצובה
+                        </br>זוכר איך שאמרתי בואי נתחיל מהתחלה
+                    </p>
 
-                <p>Eating raw fish didn't sound like a good idea. "It's a delicacy in Japan," didn't seem to make it any
-                    more appetizing.
-                    Raw fish is raw fish, delicacy or not.</p>
+                    <p class="mb-5">
+                        כי רק איתך אני פורח
+                        </br>בלעדייך יש לי חורף בחלון
+                        </br>עכשיו אני כותב לך את השיר האחרון
+                        </br>איך אוכל להיות שמח
+                        </br>בעולם שאת נמצאת כל כך רחוק
+                        </br>עכשיו אני כותב לך
+                        </br>את השיר האחרון
+                    </p>
 
-                <p>The coin hovered in the air, spinning over and over again. It reached its peak and began to descend.
-                    Both boys were
-                    pleading with it to land a certain way but the coin had already made up its mind on what it was
-                    going to do.</p>
+                    <p class="mb-5">
+                        מכתבים השלכנו
+                        </br>אל תוך האש קרענו
+                        </br>את העבר לחתיכות
+                    </p>
 
-                <p>It was going to rain. The weather forecast didn't say that, but the steel plate in his hip did. He
-                    had learned over the
-                    years to trust his hip over the weatherman. It was going to rain, so he better get outside and
-                    prepare.</p>
+                    <p class="mb-5">
+                        ולמה את לבד אם את כזאתי חכמה
+                        </br>ואיך את שוב בוכה אם את בכלל לא עצובה
+                        </br>זוכר איך שאמרתי בואי נתחיל מהתחלה
+                    </p>
+                </div>
+
+                <div class="swedish">
+                    <h1 class="mb-2">Peer Tasi - Winter In My Window</h1>
+
+                    <p class="mb-5">
+                        We knew beautiful days</br>
+                        remember how we loved</br>
+                        the time took all away some time ago</br>
+                        we played many songs</br>
+                        we lied with many words</br>
+                        we are still paying for that till today</br>
+                    </p>
+
+                    <p class="mb-5">
+                        And why are you alone if you are so smart</br>
+                        and why are you crying again if you aren't sad</br>
+                        remember how i said let's start all over again from the beginning</br>
+                    </p>
+
+                    <p class="mb-5">
+                        Because i can only thrive with you</br>
+                        without you i only have winter in my window</br>
+                        now i am writing you my last song</br>
+                        how can i be happy</br>
+                        in a world where you are so far away</br>
+                        i am writing to you now</br>
+                        my last song</br>
+                    </p>
+
+                    <p class="mb-5">
+                        We threw letters</br>
+                        into the fire, we tore up</br>
+                        our past to pieces</br>
+                    </p>
+
+                    <p class="mb-5">
+                        And why are you alone if you are so smart</br>
+                        and why are you crying again if you aren't sad</br>
+                        remember how i said let's start all over again from the beginning</br>
+                    </p>
+                </div>
             </article>
         </main>
 
-        <footer class="footer py-4 py-md-5 mt-5 bg-dark shadow-sm">
-            <div class="container py-4 py-md-5 text-light">
+        <footer class="footer py-4 p-md-5 mt-5 bg-dark shadow-sm">
+            <div class="container p-4 p-md-5 text-light">
                 <div class="row">
                     <div class="col-lg-3 mb-3">
                         <h4 class="mb-1">Awesome app</h4>
