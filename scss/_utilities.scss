@@ -159,11 +159,11 @@ $grid-breakpoints: (
             }
 
             .ms-#{$breakpoint}-#{$i} {
-                margin-left: #{($i * 0.25)}rem !important;
+                margin-inline-start: #{($i * 0.25)}rem !important;
             }
 
             .me-#{$breakpoint}-#{$i} {
-                margin-right: #{($i * 0.25)}rem !important;
+                margin-inline-end: #{($i * 0.25)}rem !important;
             }
 
             .py-#{$breakpoint}-#{$i} {
@@ -185,11 +185,11 @@ $grid-breakpoints: (
             }
 
             .ps-#{$breakpoint}-#{$i} {
-                padding-left: #{($i * 0.25)}rem !important;
+                padding-inline-start: #{($i * 0.25)}rem !important;
             }
 
             .pe-#{$breakpoint}-#{$i} {
-                padding-right: #{($i * 0.25)}rem !important;
+                padding-inline-end: #{($i * 0.25)}rem !important;
             }
         }
 
@@ -238,11 +238,11 @@ $grid-breakpoints: (
     }
 
     .ms-#{$i} {
-        margin-left: #{($i * 0.25)}rem !important;
+        margin-inline-start: #{($i * 0.25)}rem !important;
     }
 
     .me-#{$i} {
-        margin-right: #{($i * 0.25)}rem !important;
+        margin-inline-end: #{($i * 0.25)}rem !important;
     }
 
     .pt-#{$i} {
@@ -254,11 +254,11 @@ $grid-breakpoints: (
     }
 
     .ps-#{$i} {
-        padding-left: #{($i * 0.25)}rem !important;
+        padding-inline-start: #{($i * 0.25)}rem !important;
     }
 
     .pe-#{$i} {
-        padding-right: #{($i * 0.25)}rem !important;
+        padding-inline-end: #{($i * 0.25)}rem !important;
     }
 }
 
@@ -319,113 +319,113 @@ $flex-values: 0, 1, auto;
 */
 
 .d-inline-flex {
-  display: inline-flex !important;
+    display: inline-flex !important;
 }
 
 // Generate flex-direction classes
 @each $direction in $flex-directions {
     .flex-#{$direction} {
-      flex-direction: $direction !important;
+        flex-direction: $direction !important;
     }
-  }
-  
-  // Generate flex-wrap classes
-  @each $wrap in $flex-wraps {
+}
+
+// Generate flex-wrap classes
+@each $wrap in $flex-wraps {
     .flex-#{$wrap} {
-      flex-wrap: $wrap !important;
+        flex-wrap: $wrap !important;
     }
-  }
-  
-  // Generate justify-content classes
-  @each $justify in $flex-justifies {
+}
+
+// Generate justify-content classes
+@each $justify in $flex-justifies {
     .justify-content-#{$justify} {
-      justify-content: if($justify == start, flex-start,
-                       if($justify == end, flex-end,
-                       if($justify == between, space-between,
-                       if($justify == around, space-around,
-                       if($justify == evenly, space-evenly,
-                       center))))) !important;
+        justify-content: if($justify ==start, flex-start,
+                if($justify ==end, flex-end,
+                    if($justify ==between, space-between,
+                        if($justify ==around, space-around,
+                            if($justify ==evenly, space-evenly,
+                                center))))) !important;
     }
-  }
-  
-  // Generate align-items classes
-  @each $align in $flex-aligns {
+}
+
+// Generate align-items classes
+@each $align in $flex-aligns {
     .align-items-#{$align} {
-      align-items: if($align == start, flex-start,
-                    if($align == end, flex-end, 
+        align-items: if($align ==start, flex-start,
+                if($align ==end, flex-end,
                     $align)) !important;
     }
-  }
-  
-  // Generate align-self classes
-  @each $align in $flex-aligns {
+}
+
+// Generate align-self classes
+@each $align in $flex-aligns {
     .align-self-#{$align} {
-      align-self: if($align == start, flex-start,
-                    if($align == end, flex-end,
+        align-self: if($align ==start, flex-start,
+                if($align ==end, flex-end,
                     $align)) !important;
     }
-  }
-  
-  // Generate align-content classes
-  @each $align in $flex-aligns {
+}
+
+// Generate align-content classes
+@each $align in $flex-aligns {
     .align-content-#{$align} {
-      align-content: if($align == start, flex-start,
-                       if($align == end, flex-end,
-                       $align)) !important;
+        align-content: if($align ==start, flex-start,
+                if($align ==end, flex-end,
+                    $align)) !important;
     }
-  }
+}
 
-    // Generate flex-grow and flex-shrink classes
+// Generate flex-grow and flex-shrink classes
 
-  .flex-grow {
+.flex-grow {
     flex-grow: 1;
 }
 
-    @each $val in $flex-values {
+@each $val in $flex-values {
     .flex-grow-#{$val} {
-      flex-grow: $val !important;
+        flex-grow: $val !important;
     }
-  
-    .flex-shrink-#{$val} {
-      flex-shrink: $val !important;
-    }
-  }
-  
-  // Generate flex-basis classes
-  @each $val in $flex-values {
-    .flex-basis-#{$val} {
-      flex-basis: if($val == auto, auto, #{$val * 100%}) !important;
-    }
-  }
-  
-  // Generate order classes
-  @for $i from -1 through 5 {
-    .order-#{$i} {
-      order: $i !important;
-    }
-  }
 
-  .d-grid {
+    .flex-shrink-#{$val} {
+        flex-shrink: $val !important;
+    }
+}
+
+// Generate flex-basis classes
+@each $val in $flex-values {
+    .flex-basis-#{$val} {
+        flex-basis: if($val ==auto, auto, #{$val * 100%}) !important;
+    }
+}
+
+// Generate order classes
+@for $i from -1 through 5 {
+    .order-#{$i} {
+        order: $i !important;
+    }
+}
+
+.d-grid {
     display: grid !important;
-  }
-  
-  .d-inline-grid {
+}
+
+.d-inline-grid {
     display: inline-grid !important;
-  }
-  
-  // Gap utility classes
-  $gap-sizes: 0, 1, 2, 3, 4, 5; // Default Bootstrap spacing scale
-  
-  @each $size in $gap-sizes {
+}
+
+// Gap utility classes
+$gap-sizes: 0, 1, 2, 3, 4, 5; // Default Bootstrap spacing scale
+
+@each $size in $gap-sizes {
     .gap-#{$size} {
-      gap: #{$size * 0.25rem} !important; // Bootstrap uses 0.25rem spacing scale
+        gap: #{$size * 0.25rem} !important; // Bootstrap uses 0.25rem spacing scale
     }
-  
+
     .row-gap-#{$size} {
-      row-gap: #{$size * 0.25rem} !important;
+        row-gap: #{$size * 0.25rem} !important;
     }
-  
+
     .column-gap-#{$size} {
-      column-gap: #{$size * 0.25rem} !important;
+        column-gap: #{$size * 0.25rem} !important;
     }
-  }
+}

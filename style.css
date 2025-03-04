@@ -79,11 +79,3 @@ body[dir="rtl"] {
         font-size: 18px;
     }
 }
-
-.navbar-nav {
-    display: flex;
-}
-
-ul.navbar-nav li {
-    list-style: none;
-}
