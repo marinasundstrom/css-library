@@ -3580,6 +3580,26 @@ body[dir=rtl] .navbar .icon {
   /* order: -1; Move the icon to the front in RTL */
 }
 
+.navbar .container {
+  display: flex;
+  flex-wrap: inherit;
+  align-items: center;
+  justify-content: space-between;
+  height: 50px;
+}
+
+.navbar-nav {
+  display: flex;
+}
+
+.navbar .brand {
+  padding: 14px 16px;
+}
+
+ul.navbar-nav li {
+  list-style: none;
+}
+
 /* Responsive Design */
 @media screen and (max-width: 768px) {
   .navbar .navbar-nav {
@@ -3617,27 +3637,10 @@ body[dir=rtl] .navbar .icon {
   .navbar .container {
     /*flex-direction: row-reverse;*/
   }
+  .navbar .brand {
+    padding-inline-start: 0;
+  }
 }
-.navbar > .container {
-  display: flex;
-  flex-wrap: inherit;
-  align-items: center;
-  justify-content: space-between;
-  height: 50px;
-}
-
-.navbar-nav {
-  display: flex;
-}
-
-.navbar .brand {
-  padding: 14px 16px;
-}
-
-ul.navbar-nav li {
-  list-style: none;
-}
-
 .shadow-sm {
   box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075) !important;
 }
